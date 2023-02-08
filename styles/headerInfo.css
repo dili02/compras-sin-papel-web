@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.25rem;
+  font-size: 0.85rem;
   color: var(--color-2);
 }
 
@@ -14,7 +14,6 @@
 
 .header-info p {
   font-weight: 700;
-  letter-spacing: 1.25px;
 }
 
 .header-info span {

@@ -73,9 +73,9 @@ a {
   align-items: center;
 }
 
-.header-info {
+/* .header-info {
   font-size: 0.85rem;
-}
+} */
 
 .product-list {
   padding-top: calc(var(--heading-height));
