@@ -89,25 +89,27 @@ export const ProductForm = (props: Props) => {
           onChange={handleChangeInput}
         />
 
-        <input
-          type="number"
-          placeholder="Cantidad"
-          name="quantity"
-          value={quantity}
-          onChange={handleChangeInput}
-        />
+        <div className="form-control-2">
+          <input
+            type="number"
+            placeholder="Cantidad"
+            name="quantity"
+            value={quantity}
+            onChange={handleChangeInput}
+          />
 
-        <select
-          onChange={handleChangeSelect}
-          value={inCart}
-          className="select-option"
-        >
-          <option selected disabled>
-            Seleccionar una opción
-          </option>
-          <option value="false">Fuera del Carro</option>
-          <option value="true">Dentro del Carro</option>
-        </select>
+          <select
+            onChange={handleChangeSelect}
+            value={inCart}
+            className="select-option"
+          >
+            <option selected disabled>
+              Seleccionar una opción
+            </option>
+            <option value="false">Fuera del Carro</option>
+            <option value="true">Dentro del Carro</option>
+          </select>
+        </div>
 
         <Button className="button-primary width-100" isDisabled={!productName}>
           {query.id ? "EDITAR" : "AGREGAR"}

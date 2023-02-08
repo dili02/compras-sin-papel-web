@@ -3,6 +3,7 @@
   justify-content: space-between;
   align-items: center;
   font-size: 1.25rem;
+  color: var(--color-2);
 }
 
 .header-info > div {

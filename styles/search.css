@@ -22,7 +22,7 @@
 
 .search-input::placeholder {
   padding: 0.5rem 0.25rem;
-  color: 2px solid var(--color-2);
+  color: var(--color-2);
 }
 
 .search-icon {

@@ -53,19 +53,19 @@ export const Card = ({ inCart, name, quantity, placeToShop, id }: Props) => {
           onClick={() => toogleProductInCartById(id)}
           className={
             inCart
-              ? "button button-tertiary button-width-075"
-              : "button button-tertiary button-width-075"
+              ? "button button-tertiary button-width-6"
+              : "button button-tertiary button-width-6"
           }
         >
           {inCart ? (
-            <div className="button-icon">
+            <div className="button-icon font-size-075">
               <span className="">
                 <i className="bx bx-cart"></i>
               </span>
               <span>SACAR</span>
             </div>
           ) : (
-            <div className="button-icon">
+            <div className="button-icon font-size-075">
               <span>
                 <i className="bx bx-cart-download"></i>
               </span>
@@ -76,18 +76,18 @@ export const Card = ({ inCart, name, quantity, placeToShop, id }: Props) => {
 
         <button
           onClick={() => push(`/editar/${id}`)}
-          className="button button-tertiary button-width-075"
+          className="button button-tertiary button-width-6"
         >
-          <div className="button-icon">
+          <div className="button-icon font-size-075">
             <i className="bx bx-edit-alt"></i>
             <span>EDITAR</span>
           </div>
         </button>
         <button
           onClick={() => deleteProduct(id)}
-          className="button button-tertiary button-width-075"
+          className="button button-tertiary button-width-6"
         >
-          <div className="button-icon">
+          <div className="button-icon font-size-075">
             <i className="bx bx-trash"></i>
             <span>ELIMINAR</span>
           </div>

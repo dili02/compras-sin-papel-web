@@ -2,10 +2,9 @@ import Head from "next/head";
 import { useState } from "react";
 import { ProductContextType, useProduct } from "../context/productContext";
 import { Button, Card, Container } from "../components";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import Image from "next/image";
-import Logo from "../assets/logo.svg";
+import Logo from "../assets/logo.png";
 
 export default function Home() {
   const {
@@ -22,7 +21,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Compras Sin Papel WebApp</title>
+        <title>Compra Sin Papel WebApp</title>
         <meta
           name="description"
           content="Una aplicación web de lista de compras sin papel para organizar tus compras de manera eficiente y sostenible. Con nuestra app, podrás crear listas de compras, marcar los productos ya comprados y acceder a ella desde cualquier lugar con conexión a internet."
@@ -38,7 +37,7 @@ export default function Home() {
 
       <header className="header-app">
         <div className="title-app">
-          <h1>compras sin papel</h1>
+          <h1>compra sin papel</h1>
         </div>
 
         <div className="header-buttons">

@@ -15,7 +15,7 @@
 }
 
 .product-status-icon {
-  font-size: 1.5rem;
+  font-size: 1rem;
   padding: 0.5rem;
   border-radius: var(--border-radius);
 }
@@ -32,25 +32,25 @@
 
 .product-status-text-in {
   color: var(--color-green-dark);
-  font-size: 1.35rem;
+  font-size: 1rem;
 }
 
 .product-status-text-out {
   color: var(--color-red-dark);
-  font-size: 1.35rem;
+  font-size: 1rem;
 }
 
 .product-item-name {
   padding: 1rem 0;
   text-transform: uppercase;
-  color: var(--color-2);
+  color: var(--color-3);
 }
 
 .product-item-place-quantity {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.05rem;
+  font-size: 0.9rem;
 }
 
 .product-actions {
