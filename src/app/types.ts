@@ -5,6 +5,8 @@ export type Category = {
   products: Product[];
 };
 
+export type CategoryList = Omit<Category, "products" | "userId">;
+
 export type Product = {
   id: string;
   name: string;

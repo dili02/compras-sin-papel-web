@@ -12,7 +12,7 @@ type Props = {
   userId: string;
 };
 
-type CategoryList = Omit<Category, "products">;
+type CategoryList = Omit<Category, "products" | "userId">;
 
 export default async function CategoryList({ query, userId }: Props) {
   const categories: CategoryList[] = await getCategories(userId, query);

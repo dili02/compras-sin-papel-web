@@ -16,11 +16,12 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import { Category } from "@prisma/client";
+// import { Category } from "@prisma/client";
 import { useSearchParams, usePathname, useRouter } from "next/navigation";
+import { CategoryList } from "@/app/types";
 
 type Props = {
-  categories: Category[];
+  categories: CategoryList[];
 };
 
 export default function SearchCategory({ categories }: Props) {

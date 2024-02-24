@@ -7,12 +7,15 @@ import { getCategories } from "@/fetch/category.fetch";
 import SearchCategory from "./category-search";
 import CategoryList from "./category-list";
 import CategorySkeleton from "./category-skeleton";
+import { Category } from "@/app/types";
 
 type Props = {
   searchParams?: {
     categoria?: string;
   };
 };
+
+export type CategoryList = Omit<Category, "products">;
 
 export default async function page({ searchParams }: Props) {
   const { getUser } = getKindeServerSession();
@@ -21,7 +24,7 @@ export default async function page({ searchParams }: Props) {
 
   const query = searchParams?.categoria || "";
 
-  const allcategories = await getCategories(user?.id as string);
+  const allcategories: CategoryList[] = await getCategories(user?.id as string);
 
   return (
     <div className="grid items-start pt-6">
