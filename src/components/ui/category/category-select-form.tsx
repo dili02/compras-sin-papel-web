@@ -14,16 +14,12 @@ import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 
 type Props = {};
 
+type Category = {
+  id: string;
+  name: string;
+};
+
 async function getCategories(userID: string) {
-  //   const data = (await prisma.category
-  //     .findMany({
-  //       where: { userId: userID },
-  //       select: { name: true, id: true },
-  //       distinct: ["name"],
-  //     })
-  //     .then((names) =>
-  //       names.map(({ name }) => name).filter(Boolean)
-  //     )) as string[];
   const data = await prisma.category.findMany({
     where: { userId: userID },
     select: { name: true, id: true },
@@ -37,7 +33,7 @@ export default async function CategorySelectForm({}: Props) {
 
   const user = await getUser();
 
-  const data = await getCategories(user?.id as string);
+  const data: Category[] = await getCategories(user?.id as string);
 
   return (
     <div className="space-y-1">
