@@ -13,7 +13,7 @@ type Props = {
 };
 
 export default async function CategoryList({ query, userId }: Props) {
-  const categories = await getCategories(userId, query);
+  const categories: Category[] = await getCategories(userId, query);
 
   return (
     <section className="mt-5">
