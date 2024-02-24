@@ -1,4 +1,5 @@
 import { deleteCategoryById } from "@/actions/category.action";
+import { Category } from "@/app/types";
 import ButtonDeleteIcon from "@/components/button-delete-icon";
 import { Button } from "@/components/ui/button";
 import { getCategories } from "@/fetch/category.fetch";
@@ -11,8 +12,10 @@ type Props = {
   userId: string;
 };
 
+type CategoryList = Omit<Category, "products" | "userId">;
+
 export default async function CategoryList({ query, userId }: Props) {
-  const categories = await getCategories(userId, query);
+  const categories: CategoryList[] = await getCategories(userId, query);
 
   return (
     <section className="mt-5">
