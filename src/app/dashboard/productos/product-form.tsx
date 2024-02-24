@@ -27,12 +27,18 @@ type Props = {
   listId: string;
 };
 
+type Category = {
+  id: string;
+  name: string;
+  userId: string;
+};
+
 export default async function ProductForm({ listId }: Props) {
   const { getUser } = getKindeServerSession();
 
   const user = await getUser();
 
-  const categories = await getCategories(user?.id);
+  const categories: Category[] = await getCategories(user?.id);
 
   return (
     <Card className="border-none mt-2">
