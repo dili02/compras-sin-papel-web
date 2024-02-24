@@ -8,7 +8,6 @@ import { getCategories } from "@/fetch/category.fetch";
 import SearchCategory from "../../categorias/category-search";
 import InCartStatusSearch from "./incart-search";
 import ProductSkeleton from "../../productos/product-skeleton";
-import Info from "../info";
 import { Icons } from "@/components/icons";
 
 type Props = {
@@ -19,6 +18,18 @@ type Props = {
     producto?: string;
     categoria?: string;
     estado?: string;
+  };
+};
+
+type Product = {
+  id: string;
+  name: string;
+  inCart: boolean;
+  listId: string;
+  category: {
+    id: string;
+    name: string;
+    userId: string;
   };
 };
 
@@ -43,7 +54,7 @@ export default async function page({ params: { id }, searchParams }: Props) {
   const productsSearch = await getProducts(id, user?.id as string);
   const categories = await getCategories(user?.id as string);
 
-  const products = await getProducts(
+  const products: Product[] = await getProducts(
     id,
     user?.id as string,
     product,
