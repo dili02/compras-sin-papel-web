@@ -16,7 +16,6 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import { Category, Product } from "@prisma/client";
 import { useSearchParams, usePathname, useRouter } from "next/navigation";
 
 type ProductSearch = {
