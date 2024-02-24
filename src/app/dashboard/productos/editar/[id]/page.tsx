@@ -33,12 +33,18 @@ type Props = {
   };
 };
 
+type Category = {
+  id: string;
+  name: string;
+  userId: string;
+};
+
 export default async function page({ params: { id } }: Props) {
   const product = await getProductById({
     id,
   });
 
-  const categories = await getCategories(product?.userId);
+  const categories: Category[] = await getCategories(product?.userId);
 
   return (
     <section className="min-h-[90vh] w-full py-8 flex flex-col items-center gap-7 mx-auto">
