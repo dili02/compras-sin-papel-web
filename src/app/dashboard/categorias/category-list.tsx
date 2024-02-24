@@ -2,7 +2,6 @@ import { deleteCategoryById } from "@/actions/category.action";
 import ButtonDeleteIcon from "@/components/button-delete-icon";
 import { Button } from "@/components/ui/button";
 import { getCategories } from "@/fetch/category.fetch";
-// import { Category } from "@prisma/client";
 import { Edit, FileWarning } from "lucide-react";
 import Link from "next/link";
 import React from "react";
