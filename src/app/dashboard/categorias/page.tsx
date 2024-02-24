@@ -15,7 +15,7 @@ type Props = {
   };
 };
 
-export type CategoryList = Omit<Category, "products">;
+type CategoryList = Omit<Category, "products">;
 
 export default async function page({ searchParams }: Props) {
   const { getUser } = getKindeServerSession();

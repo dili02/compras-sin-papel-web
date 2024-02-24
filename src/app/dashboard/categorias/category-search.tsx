@@ -18,10 +18,9 @@ import {
 } from "@/components/ui/popover";
 // import { Category } from "@prisma/client";
 import { useSearchParams, usePathname, useRouter } from "next/navigation";
-import { CategoryList } from "@/app/types";
 
 type Props = {
-  categories: CategoryList[];
+  categories: Category[];
 };
 
 export default function SearchCategory({ categories }: Props) {

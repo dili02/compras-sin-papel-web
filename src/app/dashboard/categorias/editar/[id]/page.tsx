@@ -16,12 +16,15 @@ import { X } from "lucide-react";
 import ButtonEdit from "@/components/button-edit";
 import { getCategoryById } from "@/fetch/category.fetch";
 import { editCategoryById } from "@/actions/category.action";
+import { Category } from "@/app/types";
 
 type Props = {
   params: {
     id: string;
   };
 };
+
+// type CategoryList = Omit<Category, "products" | "userId"> | null;
 
 export default async function page({ params: { id } }: Props) {
   const { getUser } = getKindeServerSession();
