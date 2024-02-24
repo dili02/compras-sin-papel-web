@@ -2,7 +2,7 @@ import { deleteCategoryById } from "@/actions/category.action";
 import ButtonDeleteIcon from "@/components/button-delete-icon";
 import { Button } from "@/components/ui/button";
 import { getCategories } from "@/fetch/category.fetch";
-import { Category } from "@prisma/client";
+// import { Category } from "@prisma/client";
 import { Edit, FileWarning } from "lucide-react";
 import Link from "next/link";
 import React from "react";
@@ -13,7 +13,7 @@ type Props = {
 };
 
 export default async function CategoryList({ query, userId }: Props) {
-  const categories: Category[] = await getCategories(userId, query);
+  const categories = await getCategories(userId, query);
 
   return (
     <section className="mt-5">
@@ -30,7 +30,7 @@ export default async function CategoryList({ query, userId }: Props) {
       )}
 
       <div className="grid grid-cols-1 gap-5 md:grid-cols-2 transition-all xl:grid-cols-3">
-        {categories.map((category: Category) => (
+        {categories.map((category) => (
           <article
             key={category.id}
             className="flex justify-between flex-grow gap-3 border rounded-xl p-5 bg-muted overflow-hidden md:flex-col"
