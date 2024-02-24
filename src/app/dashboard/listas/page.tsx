@@ -16,8 +16,14 @@ import { getLists } from "./listas.fetch";
 
 type Props = {};
 
+type List = {
+  id: string;
+  name: string;
+  userId: string;
+};
+
 export default async function page({}: Props) {
-  const lists = await getLists();
+  const lists: List[] = await getLists();
 
   const { getUser } = getKindeServerSession();
 
