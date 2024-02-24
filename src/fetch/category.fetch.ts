@@ -1,10 +1,11 @@
 import { unstable_noStore as noStore } from "next/cache";
 import prisma from "@/lib/db";
+import { Category } from "@prisma/client";
 
 export async function getCategories(userId?: string, query?: string) {
   noStore();
 
-  const categories = await prisma.category.findMany({
+  const categories: Category[] = await prisma.category.findMany({
     where: { userId, name: { contains: query } },
     orderBy: { name: "asc" },
   });

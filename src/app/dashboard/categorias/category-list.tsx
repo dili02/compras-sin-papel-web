@@ -30,7 +30,7 @@ export default async function CategoryList({ query, userId }: Props) {
       )}
 
       <div className="grid grid-cols-1 gap-5 md:grid-cols-2 transition-all xl:grid-cols-3">
-        {categories.map((category: any) => (
+        {categories.map((category: Category) => (
           <article
             key={category.id}
             className="flex justify-between flex-grow gap-3 border rounded-xl p-5 bg-muted overflow-hidden md:flex-col"
